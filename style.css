@@ -339,7 +339,8 @@ img{
     margin-bottom: 10px;
 }
 
-.hero-left h1 span{
+.hero-left h2 span{
+    font-size: 48px;
     font-style: italic;
 }
 
@@ -373,32 +374,21 @@ img{
     position: relative;
     width: 100%;
     height: 100%;
-
-    top: 15px;
 }
 
 .hero-decoration{
     position:absolute;
-    left:0;
-    top:0;
     height: 100%;
     width: 100%;
+    right: 10%;
     pointer-events:none;
 }
 
 .hero-image1{
-    position:absolute;
-
-    width:100%;
+    position: relative;
     height:100%;
-
-    top:47%;
-    left:50%;
-
-    transform:translate(-50%, -50%);
-
+    width:100%;
     z-index:1;
-
     border-radius: 250px 0 0 250px;
 }
 
@@ -408,8 +398,8 @@ img{
     width:61%;
     height:100%;
 
-    top:47%;
-    left:30.7%;
+    top:50%;
+    left:30.5%;
 
     transform:translate(-50%, -50%);
 
@@ -419,28 +409,19 @@ img{
 }
 
 .shape-decor{
-    position:absolute;
-
-    top:53%;
-    left:54%;
-
-    transform:translate(-50%, -50%);
-
-    width:29%;
-    height:80%;
-
-    border:1px solid #b89247;
-    border-radius:300px 160px 160px 300px;
-
-    opacity:0.7;
-
-    z-index:1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #b89247;
+    border-radius: 300px 160px 160px 300px;
+    opacity: 0.7;
+    z-index: 1;
 }
 
 .shape-line1 {
     position: absolute;
-    top: 34%;
-    left: 35%;
+    top: 14%;
+    left: 0%;
     width: 150px;
     height: 1px;
     background: rgba(184, 146, 71, 0.35);
@@ -448,9 +429,9 @@ img{
 
 .hero-code {
     position: absolute;
-    top: 34.5%;
-    left: 36%;
-    font-size: 12px;
+    top: 12.5%;
+    left: 1%;
+    font-size: 11px;
     color: rgba(184, 146, 71, 0.35);
     font-family: 'Courier New', monospace;
     white-space: pre-line;
@@ -459,8 +440,8 @@ img{
 
 .shape-line2 {
     position: absolute;
-    top: 47%;
-    left: 37%;
+    top: 25%;
+    left: 2.5%;
     width: 140px;
     height: 1px;
     background: rgba(184, 146, 71, 0.35);
@@ -480,8 +461,8 @@ img{
 
 svg {
     position: absolute;
-    top: 47%;
-    left: 37%;
+    top: 43%;
+    left: -2%;
     overflow: visible;
     z-index: 1;
 }
@@ -504,15 +485,13 @@ svg {
     z-index:3;
 }
 
-.hero-badge {
-    position: absolute;
-    bottom: 30px;
-    right:13%;
-    z-index: 3;
-}
 
-.hero-badge img {
+.hero-image {
+    position: absolute;
+    top: 81%;
+    right: 16%;
     width:clamp(60px, 8vw, 90px);
+    z-index: 2;
 }
 
 /* ========================= */
@@ -1022,6 +1001,163 @@ svg {
 }
 
 /* ========================= */
+/* PARCOURS */
+/* ========================= */
+
+.experience {
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.experience-title{
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr;
+    gap: 1px;
+    margin-bottom: 10px;
+}
+
+.experience-title h2{
+    font-family: 'Playfair display', serif;
+    position:relative;
+    font-size:21px;
+    font-weight:500;
+    top: 2px;
+    color:var(--primary);
+}
+
+.experience-title .separator{
+    position: relative;
+    top: 50%;
+    left: 1%;
+    width: 100%;
+    height: 1px;
+    background: rgba(184, 146, 71, 0.35);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
+    gap: 10px;
+}
+
+.col-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.col-header h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8b8b8b;
+    margin: 0;
+}
+
+.experience-pro .col-header {
+    justify-content: space-between;
+}
+
+.icon-circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    border-radius: 50%;
+    background: #9ca2a8;
+    display: grid; /* grid centre mieux que flex pour les SVG */
+    place-items: center;
+    color: #101c32;
+    line-height: 0; /* coupe le décalage vertical */
+    flex-shrink: 0;
+}
+
+.icon-circle svg {
+    position: static;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.item {
+    position: relative; /* ça manquait */
+    margin-bottom: 32px;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 4px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #faf8f5;
+    border: 2px solid #8b7355;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: rgba(184, 146, 71, 0.35);
+}
+
+.item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 4px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #faf8f5;
+    border: 2px solid #8b7355;
+}
+
+.date {
+    font-size: 13px;
+    color: #8b8b8b;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #2d2d2d;
+}
+
+.school, .company {
+    font-size: 14px;
+    color: #6b6b6b;
+    margin: 0 0 8px 0;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6b6b6b;
+    margin: 0;
+}
+
+/* ========================= */
 /* ABOUT */
 /* ========================= */
 
@@ -1376,17 +1512,12 @@ svg {
 
     .navbar {
         left: 0;
-        width: 768px;
         height: 50px;
     }
 
     .hero p{
         font-size: 15px;
         max-width: 100%;
-    }
-
-    .hero-left {
-        width: 100%;
     }
 
     .hero-left .hero-subtitle{
@@ -1416,45 +1547,22 @@ svg {
     }
 
     /* =========================
-       HERO RIGHT CONTAINER
-    ========================= */
-
-    .hero-right{
-        max-width: 750px;
-    }
-
-    /* =========================
-       IMAGE BACKGROUND
-    ========================= */
-
-    .hero-image1{
-        border-radius: 320px 0 0 320px;
-        margin-top: 5px;
-        width: 90%;
-        left: 55%;
-    }
-
-    /* =========================
        IMAGE PRINCIPALE
     ========================= */
 
-    .hero-image2{
-        width: 61%;
-        height: 65%;
-        left: 43%;
-        top: 65.2%;
+    .hero-image1 {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        border-radius: 290px 0 0 290px;
     }
 
-    /* =========================
-       SHAPE DECOR FRAME
-    ========================= */
-
-    .shape-decor{
-        width: 50%;
-        height: 100%;
-        left: 64%;
-        top: 60%;
-        border-radius: 500px 0px 0px 500px;
+    .hero-image2 {
+        width: 61%;
+        height: 65%;
+        left: 33%;
+        top: 67.2%;
     }
 
     /* =========================
@@ -1474,40 +1582,36 @@ svg {
        BADGE
     ========================= */
 
-    .hero-badge{
-        bottom: 120px;
-        right: 10%;
-    }
-
-    .hero-badge img{
-        width: 78px;
+    .hero-image{
+        right: 12%;
+        width: 87px;
     }
 
     /* =========================
        DECOR TEXT
     ========================= */
 
-    .hero-code{
-        top: 30%;
-        left: 34%;
+    .hero-code {
+        top: 21%;
+        left: -5%;
         font-size: 11px;
     }
 
-    .shape-line1{
-        top: 30%;
-        left: 33%;
+    .shape-line1 {
+        top: 22%;
+        left: -7%;
         width: 120px;
     }
 
-    .shape-line2{
-        top: 43%;
-        left: 35%;
+    .shape-line2 {
+        top: 33%;
+        left: -3%;
         width: 110px;
     }
 
-    svg{
-        top: 50%;
-        left: 36%;
+    svg {
+        top: 40%;
+        left: -5%;
         width: 85px;
         transform: rotate(10deg);
     }
@@ -1640,6 +1744,50 @@ svg {
         font-size: 12px;
     }
 
+    .experience {
+        padding: 0 10px;
+    }
+
+    .experience-title h2 {
+        font-size: 20px;
+    }
+
+    .experience-title .separator{
+       top: 60%;
+    }
+
+    .col-header {
+        margin-bottom: 10px;
+    }
+
+    .col-header h3 {
+        font-size: 10px;
+    }
+
+    .item::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .item h4 {
+        font-size: 14px;
+        margin: 0 0 2px 0;
+    }
+
+    .school, .company {
+        font-size: 12px;
+        margin: 0 0 2px 0;
+    }
+
+    .date {
+        font-size: 11px;
+    }
+
+    .timeline::before {
+        left: 8px;
+        top: 6px;
+    }
+
     .about-content .section-subtitle,
     .about-content a {
         font-size: 8px;
@@ -1717,11 +1865,23 @@ svg {
     }
 }
 
-/* Mobile ET MINI-TABLETTE*/
+/* Mobile*/
+@media (min-width: 320px) and (max-width: 330px) {
+
+    .icon-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon-circle svg {
+        width: 26px;
+    }
+}
+
 @media (max-width: 375px) {
-    .navbar{
-        margin-left:0;
-        width:81.2%;
+
+    .layout{
+        width: 100%;
     }
 
     /* Cache les liens */
@@ -1742,25 +1902,22 @@ svg {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
         padding-left: 0;
-        width: 81.2%;
+        width: 100%;
         top: 0;
     }
 
     .hero-left{
         order: 1;
-        width: 95%;
         padding-left: 2%;
-        margin-bottom: 0;
     }
 
     .hero-left .hero-subtitle{
         font-size: 10px;
     }
 
-    .hero-left h1 {
-        line-height: 1.1;
-        font-size: 30px;
-        margin: 5px 0;
+    .hero-left h2 span {
+        font-size: 26px;
+        font-style: italic;
     }
 
     .hero-left h2 {
@@ -1788,40 +1945,32 @@ svg {
     }
 
     .hero-right{
-        left: -10.5%;
-        margin-top: -21%;
         order: 2;
-        position: relative;
-        width: 85%;
-        max-width: 600px;
-        height: auto;
-        min-height: 400px;
-        aspect-ratio: 1 / 1;
-        margin-inline: auto;
         z-index: 2;
     }
+    
+    .hero-image1 {
+        width: 89%;
+        left: 11%;
+    }
 
-    .hero-right,
-    .hero-decoration{
-        grid-column: auto;
-        grid-row: auto;
+    .hero-image2 {
+        width: 43%;
+        height: 100%;
+        left: 32%;
+        top: 50.4%;
+        border-radius: 0 0 0 103px;
     }
 
     .hero-decoration{
-        top: 28%;
-        order: 3;
-        position: absolute;
         z-index: 1;
-        width: 90%;
-        height: 90%;
-        display: flex;
+        right: 0;
     }
 
     svg{
-        top: 50%;
-        height: 90px;
-        display: block;
-        left: -5%;
+        top: 41.5%;
+        height: 58px;
+        left: -7%;
         width: 80px;
     }
 
@@ -1830,70 +1979,47 @@ svg {
     ========================= */
 
     .hero-right pre{
-         top: 10%;
-        right: 0;
-
-        max-width: 220px;
-        font-size: 10px;
+        top: 9%;
+        left: 40%;
+        font-size: 4px;
     }
 
     .hero-badge{
-        bottom: 90px;
-        right: 12%;
+        bottom: 50px;
+        right: 3%;
         height: 20px;
         width: 20px;
     }
 
-        .hero-badge img {
-        width: 58px;
+        .hero-image{
+        width: 40px;
+        bottom: 8px;
+        right: 13%;
     }
 
     /* =========================
        DECORATION ADJUSTMENT
     ========================= */
 
+    .shape-decor{
+        width: 97%;
+        left: 3%;
+    }
+
     .shape-line1{
         left: 2%;
-        top: 40%;
+        top: 10%;
     }
 
     .shape-line2{
-        left: 32%;
+        left: 4.5%;
+        top: 35%;
     }
 
     .hero-code{
         left: 3%;
-        top: 40%;
-        font-size: 10px;
-    }
-
-    .shape-decor{
-        width: 100%;
-        left: 55%;
-        height: 52%;
-        top: 54%;
-    }
-
-    .hero-image1 {
-        border-radius: 320px 0 0 320px;
-        top: 55%;
-        width: 80%;
-        height: 80%;
-        left: 59%;
-    }
-
-    .hero-image2 {
-        width: 61%;
-        height: 65%;
-        left: 49.5%;
-        top: 63.7%;
-        border-radius: 0 0 0 160px;
-    }
-
-    .hero-right pre {
-        top: 20%;
-        left: 40%;
-        font-size: 6px;
+        top: 8%;
+        font-size: 8px;
     }
 
     .stack-title span{
@@ -2002,6 +2128,7 @@ svg {
 
     .skill-top{
         font-size: 9px;
+        grid-template-columns: 1fr 1.8fr 0.2fr;
     }
 
     .skill-top span{
@@ -2009,7 +2136,7 @@ svg {
     }
 
     .skill-bar{
-        width: 150px;
+        width: 220px;
     }
 
     .skill-top span:last-child {
@@ -2063,9 +2190,86 @@ svg {
         font-size: 12px;
     }
 
+    .experience {
+        padding: 0 10px;
+    }
+
+    .experience-title h2 {
+        font-size: 20px;
+    }
+
+    .experience-title .separator{
+       top: 60%;
+    }
+
+    .experience-grid{
+        grid-template-columns: 0.2fr 1.8fr;
+        grid-template-areas: 
+            "circle1 formation" 
+            "circle2 exp";
+    }
+
+    .icon-circle{
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle1{
+        grid-area: circle1;
+    }
+
+    .formation{
+        grid-area: formation;
+    }
+
+    .experience-pro{
+        grid-area: exp;
+    }
+
+    .circle2{
+        grid-area: circle2;
+        top: 30%;
+    }
+
+    .col-header {
+        margin-bottom: 10px;
+    }
+
+    .col-header h3 {
+        font-size: 10px;
+    }
+
+    .item::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .item h4 {
+        font-size: 14px;
+        margin: 0 0 2px 0;
+    }
+
+    .school, .company {
+        font-size: 12px;
+        margin: 0 0 2px 0;
+    }
+
+    .desc{
+        font-size: 11px;
+    }
+
+    .date {
+        font-size: 11px;
+    }
+
+    .timeline::before {
+        left: 8px;
+        top: 6px;
+    }
+
     .about{
         position: relative;
-        height: 130px;
+        height: 100%;
         padding-top: 2px;
         display: grid;
         grid-template-columns: 0.8fr 1.4fr 0.8fr;
@@ -2088,8 +2292,8 @@ svg {
 
     .about-image{
         grid-area: image;
-        width: 80px;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         z-index: 2;
     }
 
@@ -2102,7 +2306,6 @@ svg {
 
     .about-content{
         grid-area: acontent;
-        padding: 14px 14px;
         min-height: auto;
         display: flex;
         flex-direction: column;
@@ -2113,11 +2316,12 @@ svg {
 
     .about-content .section-subtitle {
         font-size: 8px;
+        margin-bottom: 9px;
     }
 
     .about-content h2{
         font-size: 16px;
-        margin-bottom: 5px;
+        margin-bottom: 17px;
         line-height: 1;
     }
 
@@ -2133,8 +2337,8 @@ svg {
     .about-img-mobile{
         grid-area: img;
         display: block;
-        width: 90px;
-        height:80%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: right center;
         z-index: 1;
@@ -2198,4 +2402,618 @@ svg {
         display: none;
     }
 
+}
+
+@media(min-width: 376px) and (max-width: 425px) {
+
+    .layout{
+        width: 100%;
+    }
+
+    /* Cache les liens */
+    .nav-links{
+        display:none;
+    }
+
+    .theme-btn svg{
+        width: 18px;
+    }
+
+    .social-sidebar {
+        display: none;
+    }
+
+    .hero{
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding-left: 0;
+        width: 100%;
+        top: 0;
+    }
+
+    .hero-left{
+        order: 1;
+        padding-left: 2%;
+    }
+
+    .hero-left .hero-subtitle{
+        font-size: 10px;
+    }
+
+    .hero-left h2 span {
+        font-size: 26px;
+        font-style: italic;
+    }
+
+    .hero-left h2 {
+        line-height: 1.1;
+        font-size: 25px;
+        margin:0 0 10px 0;
+    }
+
+    .hero-left .separator {
+        margin-bottom: 10px;
+    }
+
+    .hero-left p {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 8px;
+    }
+
+    .hero-right{
+        order: 2;
+        z-index: 2;
+    }
+    
+    .hero-image1 {
+        width: 89%;
+        left: 11%;
+    }
+
+    .hero-image2 {
+        width: 57%;
+        height: 100%;
+        left: 39%;
+        top: 50.4%;
+        border-radius: 0 0 0 135px;
+    }
+
+    .hero-decoration{
+        z-index: 1;
+        right: 0;
+    }
+
+    svg{
+        top: 37.5%;
+        height: 78px;
+        left: -4%;
+        width: 80px;
+    }
+
+    /* =========================
+       HERO RIGHT ADAPTATION
+    ========================= */
+
+    .hero-right pre{
+        top: 7%;
+        left: 32%;
+        font-size: 6px;
+    }
+
+    .hero-badge{
+        bottom: 50px;
+        right: 3%;
+        height: 20px;
+        width: 20px;
+    }
+
+    .hero-image{
+        width: 50px;
+        bottom: 8px;
+        right: 13%;
+    }
+
+    /* =========================
+       DECORATION ADJUSTMENT
+    ========================= */
+
+    .shape-decor{
+        width: 97%;
+        left: 3%;
+    }
+
+    .shape-line1{
+        left: 2%;
+        top: 10%;
+    }
+
+    .shape-line2{
+        left: 4.5%;
+        top: 28%;
+    }
+
+    .hero-code{
+        left: 3.5%;
+        top: 8%;
+        font-size: 8px;
+    }
+
+    .stack-title span{
+        font-size: 8px;
+    }
+
+    .stack-grid{
+        gap: 20px;
+    }
+
+    .stack-item i{
+        font-size: 25px;
+    }
+
+    .projects-top{
+        margin: 10px 5px 10px 5px;
+    }
+
+    .projects-top .projects-subtitle{
+        font-size: 8px;
+    }
+
+    .projects-top h2{
+        font-size: 25px;
+    }
+
+    .projects-top a{
+        font-size: 8px;
+    }
+
+    .projects-grid{
+        margin-left: 5px;
+        gap: 15px;
+    }
+
+    .project-card{
+        flex: 0 0 200px;
+    }
+
+    .project-card img{
+        width: 90%;
+        justify-self: center;
+    }
+
+    .badge {
+        font-size: 9px;
+        font-weight: 300;
+        right: -140px;
+    }
+
+    .project-content{
+        padding: 10px;
+    }
+
+    .project-content h3{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .project-content p{
+        font-size: 11px;
+    }
+
+    .project-tags span{
+        font-size: 5px;
+        padding: 4px 10px;
+    }
+
+    .skills{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "skills"
+            "right"
+            "quote";
+        gap:0;
+        padding: 0;
+    }
+
+    .skills-title{
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
+    .skills-title span{
+        font-size: 16px;
+        top: 0;
+    }
+
+    .skills-title .separator{
+        width: 60%;
+    }
+
+    .skills-grid{
+        padding-left: 5px;
+    }
+
+    .skills-grid .section-subtitle{
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+
+    .skill{
+        margin-bottom: 4px;
+    }
+
+    .skill-top{
+        font-size: 9px;
+        grid-template-columns: 1fr 1.8fr 0.2fr;
+    }
+
+    .skill-top span{
+        font-size: 10px;
+    }
+
+    .skill-bar{
+        width: 220px;
+    }
+
+    .skill-top span:last-child {
+        font-size: 8px;
+        margin-left: 8px;
+    }
+
+    .skills-right{
+        padding-left: 10px;
+    }
+
+    .expertise-subtitle{
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+
+    .expertise-icon{
+        font-size: 20px;
+    }
+
+    .expertise-content h4 {
+        font-size: 10px;
+    }
+
+    .expertise-content p {
+        font-size: 8px;
+    }
+
+    .expertise-column1,
+    .expertise-column2{
+        gap: 15px;
+    }
+
+    .quote-card {
+        --size: 240px;
+        width: 72%;
+        align-self: center;
+        align-content: center;
+        justify-content: center;
+        justify-self: center;
+        top: 0;
+        flex-wrap: wrap;
+    }
+
+    .quote-icon{
+        font-size: 15px;
+    }
+
+    .quote-card p{
+        font-size: 18px;
+    }
+
+    .quote-card span{
+        font-size: 12px;
+    }
+
+    .experience {
+        padding: 0 10px;
+    }
+
+    .experience-title h2 {
+        font-size: 20px;
+    }
+
+    .experience-title .separator{
+       top: 60%;
+    }
+
+    .experience-grid{
+        grid-template-columns: 0.2fr 1.8fr;
+        grid-template-areas: 
+            "circle1 formation" 
+            "circle2 exp";
+    }
+
+    .icon-circle{
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle1{
+        grid-area: circle1;
+    }
+
+    .formation{
+        grid-area: formation;
+    }
+
+    .experience-pro{
+        grid-area: exp;
+    }
+
+    .circle2{
+        grid-area: circle2;
+        top: 30%;
+    }
+
+    .col-header {
+        margin-bottom: 10px;
+    }
+
+    .col-header h3 {
+        font-size: 10px;
+    }
+
+    .item::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .item h4 {
+        font-size: 14px;
+        margin: 0 0 2px 0;
+    }
+
+    .school, .company {
+        font-size: 12px;
+        margin: 0 0 2px 0;
+    }
+
+    .desc{
+        font-size: 11px;
+    }
+
+    .date {
+        font-size: 11px;
+    }
+
+    .timeline::before {
+        left: 8px;
+        top: 6px;
+    }
+
+    .about{
+        position: relative;
+        height: 130px;
+        padding-top: 2px;
+        display: grid;
+        grid-template-columns: 0.8fr 1.4fr 0.8fr;
+        grid-template-areas: "image acontent img";
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .about-image,
+    .about-img-mobile{
+        height: auto;
+        aspect-ratio: 3/4;
+    }
+
+    .about-image img,
+    .about-img-mobile{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-image{
+        grid-area: image;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    .about-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left bottom;
+    }
+
+    .about-content{
+        grid-area: acontent;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+        z-index: 2;
+    }
+
+    .about-content .section-subtitle {
+        font-size: 8px;
+        margin-bottom: 9px;
+    }
+
+    .about-content h2{
+        font-size: 16px;
+        margin-bottom: 17px;
+        line-height: 1;
+    }
+
+    .about-content p,
+    .about-content a{
+        display: none;
+    }
+
+    .about-card{
+        display: none;
+    }
+
+    .about-img-mobile{
+        grid-area: img;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        z-index: 1;
+        -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .btn-mobile{
+        display: block;
+        margin: 0 0 5px 0;
+        width: fit-content;
+        height: 30px;
+        padding: 1px 1px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: .3s;
+        align-items: center;
+        gap: 10px;
+        background: var(--primary);
+        color: #F5F1E8;
+        font-size: 8px;
+    }
+
+    .footer{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand h2{
+        font-size: 24px;
+    }
+
+    .footer-brand p {
+        font-size: 9px;
+    }
+
+    .footer-brand h6 {
+        display: none;
+    }
+
+    .footer-contact{
+        display: none;
+    }
+
+    .social-icons {
+        gap: 8px;
+        margin-right: 10px;
+    }
+
+    .footer-socials h4{
+        display: none;
+    }
+
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-quote {
+        display: none;
+    }
+
+}
+
+/* DESKTOP */
+@media (min-width: 1400px) and (max-width: 1440px) {
+    svg{
+        top: 45%;
+    }
+
+    .hero-code{
+        font-size: 14px;
+        top: 12%;
+    }
+
+    .shape-line2{
+        top: 28%;
+        left: 2.5%;
+    }
+
+    .about-card{
+        left: 10%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .hero p {
+        font-size: 15px;
+    }
+
+    svg {
+        top: 51%;
+    }
+
+    .hero-image1 {
+        border-radius: 325px 0 0 325px;
+    }
+
+    .hero-image2 {
+        position: absolute;
+        width: 81%;
+        left: 41.5%;
+        border-radius: 0 0 0 311px;
+    }
+
+    .hero-image {
+        top: 87%;
+        right: 3%;
+    }
+
+    .hero-right pre {
+        top: 2%;
+        right: 15%;
+        font-size: 8px;
+    }
+
+    .shape-line1{
+        top: 17%;
+    }
+
+    .hero-code {
+        font-size: 12px;
+        top: 16%;
+        z-index: 1;
+    }
+
+    .shape-line2{
+        top: 28%;
+        left: 2.5%;
+    }
+
+    .skills{
+        padding: 0 0 0 30px;
+    }
+
+    .about{
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .about-content h2{
+        font-size: 25px;
+    }
+
+    .about-content p{
+        font-size: 12px;
+    }
 }
