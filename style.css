@@ -2917,9 +2917,13 @@ svg {
         display: none;
     }
 
+    .footer-socials {
+        left: 8%;
+    }
+
     .social-icons {
         gap: 8px;
-        margin-right: 10px;
+        margin: 0 5px 0 10px;
     }
 
     .footer-socials h4{
