@@ -2803,7 +2803,6 @@ svg {
     .about{
         position: relative;
         height: 130px;
-        padding-top: 2px;
         display: grid;
         grid-template-columns: 0.8fr 1.4fr 0.8fr;
         grid-template-areas: "image acontent img";
