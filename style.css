@@ -2811,12 +2811,6 @@ svg {
         overflow: hidden;
     }
 
-    .about-image,
-    .about-img-mobile{
-        height: auto;
-        aspect-ratio: 3/4;
-    }
-
     .about-image img,
     .about-img-mobile{
         height: 100%;
