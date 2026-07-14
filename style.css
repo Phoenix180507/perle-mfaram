@@ -1956,9 +1956,8 @@ svg {
     .hero-image2 {
         width: 43%;
         height: 100%;
-        left: 33%;
+        left: 35%;
         top: 50.4%;
-        border-radius: 0 0 0 103px;
     }
 
     .hero-decoration{
@@ -2971,7 +2970,6 @@ svg {
         position: absolute;
         width: 81%;
         left: 41.5%;
-        border-radius: 0 0 0 311px;
     }
 
     .hero-image {
